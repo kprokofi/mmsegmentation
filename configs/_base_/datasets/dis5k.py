@@ -1,5 +1,5 @@
-dataset_type='CityscapesHalf'
-data_root='data/citiscapes_semisl'
+dataset_type='DIS5K'
+data_root='data/DIS5K'
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
