@@ -4,7 +4,7 @@ from .builder import DATASETS, PIPELINES, build_dataloader, build_dataset
 from .chase_db1 import ChaseDB1Dataset
 from .cityscapes import CityscapesDataset
 from .coco_stuff import COCOStuffDataset
-from .custom import CustomDataset
+from .custom import CustomDataset, City4, CityscapesHalf, VOCHalf, Kvasir, Kitty7, Kitty, DIS5K
 from .dark_zurich import DarkZurichDataset
 from .dataset_wrappers import (ConcatDataset, MultiImageMixDataset,
                                RepeatDataset)
@@ -31,5 +31,5 @@ __all__ = [
     'COCOStuffDataset', 'LoveDADataset', 'MultiImageMixDataset',
     'iSAIDDataset', 'ISPRSDataset', 'PotsdamDataset', 'FaceOccludedDataset',
     'ImageNetSDataset', 'LoadImageNetSAnnotations',
-    'LoadImageNetSImageFromFile'
+    'LoadImageNetSImageFromFile', 'City4', 'Kitty', 'Kitty7', 'VOCHalf', 'CityscapesHalf', "Kvasir", "DIS5K"
 ]
