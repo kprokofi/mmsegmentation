@@ -11,6 +11,6 @@ model = dict(
         c1_channels=12,
         in_channels=512,
         channels=128,
-        num_classes=20
+        num_classes=19
     ),
-    auxiliary_head=dict(in_channels=256, channels=64, num_classes=20))
+    auxiliary_head=dict(in_channels=256, channels=64, num_classes=19))

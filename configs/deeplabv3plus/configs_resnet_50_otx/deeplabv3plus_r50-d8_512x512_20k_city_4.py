@@ -4,4 +4,4 @@ _base_ = [
     '../../_base_/schedules/schedule_20k.py'
 ]
 model = dict(
-    decode_head=dict(num_classes=5), auxiliary_head=dict(num_classes=5))
+    decode_head=dict(num_classes=4), auxiliary_head=dict(num_classes=4))
