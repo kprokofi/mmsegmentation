@@ -1,6 +1,6 @@
 _base_ = [
-    '../_base_/models/upernet_convnext.py', '../_base_/datasets/dis5k.py',
-    '../_base_/default_runtime.py', '../_base_/schedules/schedule_20k.py'
+    '../../_base_/models/upernet_convnext.py', '../../_base_/datasets/dis5k.py',
+    '../../_base_/default_runtime.py', '../../_base_/schedules/schedule_20k.py'
 ]
 crop_size = (512, 512)
 checkpoint_file = 'https://download.openmmlab.com/mmclassification/v0/convnext/downstream/convnext-tiny_3rdparty_32xb128-noema_in1k_20220301-795e9634.pth'  # noqa

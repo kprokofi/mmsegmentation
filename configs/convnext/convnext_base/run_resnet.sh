@@ -1,4 +1,4 @@
-bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/convnext_base/upernet_convnext_base_fp16_512x512_160k_voc12full.py 2 --work-dir work-dirs/convnext_base/voc_full
+bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/convnext_base/upernet_convnext_base_fp16_512x512_160k_voc12_full.py 2 --work-dir work-dirs/convnext_base/voc_full
 bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/convnext_base/upernet_convnext_base_fp16_512x512_160k_kvasir.py 2 --work-dir work-dirs/convnext_base/kvasir
 bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/convnext_base/upernet_convnext_base_fp16_512x512_160k_kitty7.py 2 --work-dir work-dirs/convnext_base/kitty7
 bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/convnext_base/upernet_convnext_base_fp16_512x512_160k_kitty.py 2 --work-dir work-dirs/convnext_base/kitty_full
