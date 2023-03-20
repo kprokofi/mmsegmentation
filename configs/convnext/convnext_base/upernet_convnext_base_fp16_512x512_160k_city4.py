@@ -1,5 +1,5 @@
 _base_ = [
-    '../../_base_/models/upernet_convnext.py', '../../_base_/datasets/city4.py',
+    '../../_base_/models/upernet_convnext.py', '../../_base_/datasets/city_4.py',
     '../../_base_/default_runtime.py', '../../_base_/schedules/schedule_20k.py'
 ]
 crop_size = (512, 512)
