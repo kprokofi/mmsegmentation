@@ -1,0 +1,3 @@
+bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/rerun/upernet_convnext_base_fp16_512x512_160k_kvasir.py 2 --work-dir work-dirs/convnext_tiny/kvasir
+bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/rerun/upernet_convnext_base_fp16_512x512_160k_kvasir2.py 2 --work-dir work-dirs/convnext_base/kvasir
+bash tools/dist_train.sh /home/kprokofi/mmsegmentation/configs/convnext/rerun/upernet_convnext_base_fp16_512x512_160k_kitty7.py 2 --work-dir work-dirs/convnext_small/kitty7

@@ -1104,7 +1104,6 @@ class LiteHRNet(BaseModule):
                 ]
         else:
             raise TypeError('pretrained must be a str or None')
-
         self.extra = extra
         self.conv_cfg = conv_cfg
         self.norm_cfg = norm_cfg
