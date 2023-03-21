@@ -14,3 +14,4 @@ model = dict(
         num_classes=2
     ),
     auxiliary_head=dict(in_channels=256, channels=64, num_classes=2))
+lr_config = dict(warmup_iters=2000)

@@ -5,6 +5,7 @@ import os
 import os.path as osp
 import time
 import warnings
+import time
 
 import mmcv
 import torch
@@ -228,6 +229,8 @@ def main():
     model.CLASSES = datasets[0].CLASSES
     # passing checkpoint meta for saving best checkpoint
     meta.update(cfg.checkpoint_config.meta)
+    start = time.time()
+
     train_segmentor(
         model,
         datasets,
@@ -236,6 +239,9 @@ def main():
         validate=(not args.no_validate),
         timestamp=timestamp,
         meta=meta)
+    end = time.time()
+
+    logger.info(f"Training time: {end - start}")
 
 
 if __name__ == '__main__':

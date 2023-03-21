@@ -11,4 +11,5 @@ model = dict(
 
 # By default, models are trained on 8 GPUs with 2 images per GPU
 data = dict(samples_per_gpu=4)
+lr_config = dict(warmup_iters=360)
 

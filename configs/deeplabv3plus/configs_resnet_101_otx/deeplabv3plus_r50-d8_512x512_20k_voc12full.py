@@ -4,3 +4,4 @@ _base_ = [
     '../../_base_/schedules/schedule_20k.py'
 ]
 model = dict(pretrained='open-mmlab://resnet101_v1c', backbone=dict(depth=101),  decode_head=dict(num_classes=21), auxiliary_head=dict(num_classes=21))
+lr_config = dict(warmup_iters=3600)

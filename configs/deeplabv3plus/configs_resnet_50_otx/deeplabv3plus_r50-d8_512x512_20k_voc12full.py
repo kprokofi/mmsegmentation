@@ -5,3 +5,4 @@ _base_ = [
 ]
 model = dict(
     decode_head=dict(num_classes=21), auxiliary_head=dict(num_classes=21))
+lr_config = dict(warmup_iters=3600)
