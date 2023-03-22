@@ -1,0 +1,1 @@
+bash /home/kprokofi/mmsegmentation/configs/hrnet/configs_hrnet_18/run_resnet.sh
