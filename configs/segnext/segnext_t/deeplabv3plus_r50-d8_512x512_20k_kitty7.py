@@ -1,7 +1,7 @@
 _base_ = [
     '../segnext_base.py',
     '../../_base_/datasets/kitty7.py', '../../_base_/default_runtime.py',
-    '../../_base_/schedules/schedule_20k.py'
+    '../../_base_/schedules/schedule_20k_old.py'
 ]
 model = dict(
     decode_head=dict(num_classes=7))

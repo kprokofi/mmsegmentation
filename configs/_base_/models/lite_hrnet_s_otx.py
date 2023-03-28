@@ -48,8 +48,8 @@ model = dict(
         type="FCNHead",
         in_channels=[60, 120, 240],
         in_index=(0, 1, 2),
-        input_transform="resize_concat",
-        channels=sum([60, 120, 240]),
+        input_transform='resize_concat',
+        channels=60,
         kernel_size=1,
         num_convs=1,
         concat_input=False,
@@ -67,5 +67,19 @@ model = dict(
     ),
     # model training and testing settings
     train_cfg=dict(),
-    test_cfg=dict(mode='slide', crop_size=(512,512), stride=(341, 341))
+    test_cfg=dict(mode='slide', crop_size=(512,512), stride=(341, 341)),
 )
+load_from="https://storage.openvinotoolkit.org/repositories/openvino_training_extensions/models/custom_semantic_segmentation/litehrnetsv2_imagenet1k_rsc.pth"
+log_config = dict(
+    interval=50,
+    hooks=[
+        dict(type='TextLoggerHook', by_epoch=False),
+        # dict(type='TensorboardLoggerHook')
+        # dict(type='PaviLoggerHook') # for internal services
+    ])
+# yapf:enable
+dist_params = dict(backend='nccl')
+log_level = 'INFO'
+resume_from = None
+workflow = [('train', 1)]
+cudnn_benchmark = True

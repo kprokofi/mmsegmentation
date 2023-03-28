@@ -24,7 +24,7 @@ def parse_args():
         '--work-dir',
         help=('if specified, the results will be dumped '
               'into the directory as json'))
-    parser.add_argument('--repeat-times', type=int, default=1)
+    parser.add_argument('--repeat-times', type=int, default=5)
     args = parser.parse_args()
     return args
 

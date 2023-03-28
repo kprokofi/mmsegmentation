@@ -1,7 +1,7 @@
 _base_ = [
     '../segnext_base.py',
     '../../_base_/datasets/kitty7.py', '../../_base_/default_runtime.py',
-    '../../_base_/schedules/schedule_20k.py'
+    '../../_base_/schedules/schedule_20k_old.py'
 ]
 checkpoint_file = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/segnext/mscan_l_20230227-cef260d4.pth'  # noqa
 ham_norm_cfg = dict(type='GN', num_groups=32, requires_grad=True)

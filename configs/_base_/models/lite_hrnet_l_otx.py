@@ -50,7 +50,7 @@ model = dict(
         in_channels=[18, 60, 80, 160, 320],
         in_index=(0, 1, 2, 3, 4),
         input_transform="resize_concat",
-        channels=sum([18, 60, 80, 160, 320]),
+        channels=60,
         kernel_size=1,
         num_convs=1,
         concat_input=False,
@@ -70,3 +70,17 @@ model = dict(
     train_cfg=dict(),
     test_cfg=dict(mode='slide', crop_size=(512,512), stride=(341, 341))
 )
+load_from="https://storage.openvinotoolkit.org/repositories/openvino_training_extensions/models/custom_semantic_segmentation/litehrnetxv3_imagenet1k_rsc.pth"
+log_config = dict(
+    interval=50,
+    hooks=[
+        dict(type='TextLoggerHook', by_epoch=False),
+        # dict(type='TensorboardLoggerHook')
+        # dict(type='PaviLoggerHook') # for internal services
+    ])
+# yapf:enable
+dist_params = dict(backend='nccl')
+log_level = 'INFO'
+resume_from = None
+workflow = [('train', 1)]
+cudnn_benchmark = True
